@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, minimum-scale=0.1,maximum-scale=10, initial-scale=0.35">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            width: auto;
+            height: 100%;
+        }
+
+        body {
+            align-items: center;
+            display: flex;
+            align-items: center;
+            background-color: #252525;
+            justify-content: center;
+        }
+
+        .container {
+            position: relative;
+            display: block;
+            width: 1600px;
+            height: 800px;
+            top: 0;
+            left: 0;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="canvas-ui" width="1600" height="800" style="z-index: 3"></canvas>
+        <canvas id="canvas-foreground" width="1600" height="800" style="z-index: 2"></canvas>
+        <canvas id="canvas-midground" width="1600" height="800" style="z-index: 1"></canvas>
+        <canvas id="canvas-background" width="1600" height="800" style="z-index: 0"></canvas>
+    </div>
+    <script src="./index.ts" type="module" crossorigin="anonymous"></script>
+</body>
+
+</html>
